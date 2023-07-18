@@ -1,9 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 function CircleProgressBar() {
+  const { count } = useSelector((state) => state);
   const radius = 85;
   const dashArray = radius * Math.PI * 2;
-  const dashOffset = dashArray - (dashArray * 80) / 100;
+  const dashOffset = dashArray - (dashArray * count) / 100;
 
   return (
     <svg width={250} height={250} viewBox="0 0 200 200">
