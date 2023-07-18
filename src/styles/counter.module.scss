@@ -1,0 +1,38 @@
+.counter {
+  width: 350px;
+  height: 600px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, var(--color-brand-primary), var(--color-brand-secondary));
+
+  .title {
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+
+    & h1 {
+      font-size: 2.3rem;
+      letter-spacing: 1px;
+      color: var(--color-text-secondary);
+      margin-bottom: 0;
+    }
+
+    & span {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      color: var(--color-text-secondary);
+    }
+  }
+
+  .activitys {
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .line {
+    width: 25%;
+    height: 5px;
+    border-radius: 50px;
+    background-color: var(--color-brand-tertiary);
+  }
+}

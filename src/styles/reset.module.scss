@@ -1,0 +1,15 @@
+.reset {
+  padding: 3px 30px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  border: 2px solid var(--color-text-secondary);
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-hover-primary);
+    transition: 0.2s ease-in-out;
+  }
+}

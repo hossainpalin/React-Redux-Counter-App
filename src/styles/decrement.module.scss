@@ -1,0 +1,16 @@
+.decrement {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-size: 2rem;
+  color: var(--color-text-tertiary);
+  background-color: var(--color-brand-tertiary);
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-hover-primary);
+    transition: 0.2s ease-in-out;
+  }
+}
