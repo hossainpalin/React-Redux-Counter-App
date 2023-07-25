@@ -1,7 +1,15 @@
 import { DECREMENT, INCREMENT, RESET } from '../constants/Constant';
 
+const getInitialState = () => {
+  const localState = localStorage.getItem('count');
+  if (localState) {
+    return JSON.parse(localState);
+  }
+  return 0;
+};
+
 const initialState = {
-  count: 0,
+  count: getInitialState(),
 };
 
 const Reducer = (state = initialState, action) => {
@@ -18,7 +26,7 @@ const Reducer = (state = initialState, action) => {
 
     case RESET:
       return {
-        count: 0,
+        ...state, count: 0,
       };
 
     default:

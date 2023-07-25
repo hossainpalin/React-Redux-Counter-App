@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Styles from '../styles/count.module.scss';
 import CircleProgressBar from './CircleProgressBar';
 
 function Count() {
   const { count } = useSelector((state) => state);
+
+  useEffect(() => {
+    localStorage.setItem('count', JSON.stringify(count));
+  }, [count]);
 
   return (
     <div className={`${Styles.count} flex flex-row-center`}>
